@@ -25,7 +25,7 @@ const Create = () => {
             setShowError(true)
             return; // prevent the post request to be made
         }
-
+                    
         Axios.post('https://retrogamingcrud-app-backend.up.railway.app/create',
             {
                 game: game,
@@ -34,9 +34,9 @@ const Create = () => {
                 platform: platform
             })
             .then((result) => {
-                console.log('added succesfully')
+                console.info('added succesfully')
             }).catch((err) => {
-                console.log('error mesagge' + err)
+                console.error('error mesagge' + err)
             });
         // To redirect to the Home page
         navigate("/");
