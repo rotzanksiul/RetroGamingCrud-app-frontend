@@ -3,8 +3,6 @@ import { useEffect, useState } from 'react';
 import './Games.css'
 import Axios from 'axios';
 
-
-
 const Games = () => {
 
     const [toggleUpdate, setToggleUpdate] = useState(false); // to show the update form
