@@ -13,7 +13,7 @@ const Games = () => {
 
     //get request to get the data
     const getGames = () => {
-        Axios.get('https://retrogamingcrud-app-backend.up.railway.app/games')
+        Axios.get('retrogamingcrud-app-backend-production.up.railway.app/games')
             .then((response) => {
                 setAllGames(response.data)
                 setLoading(false)
@@ -56,7 +56,7 @@ const Games = () => {
         };
 
         //update request
-        Axios.put('https://retrogamingcrud-app-backend.up.railway.app/games', updatedGame)
+        Axios.put('retrogamingcrud-app-backend-production.up.railway.app/games', updatedGame)
             .then(() => {
                 console.info('Game Updated')
                 setShowError(false); // Hide the error message after successful update
@@ -91,7 +91,7 @@ const Games = () => {
 
     //DELETE
     const deleteGame = (id) =>{
-        Axios.delete(`https://retrogamingcrud-app-backend.up.railway.app/games/${id}`)
+        Axios.delete(`retrogamingcrud-app-backend-production.up.railway.app/games/${id}`)
         .then(()=>{
             setAllGames((prevAllGames) => prevAllGames.filter((game) => game.id !== id)); //filter the games after deleting the one that matches the id  
         })

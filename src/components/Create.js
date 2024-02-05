@@ -26,7 +26,7 @@ const Create = () => {
             return; // prevent the post request to be made
         }
                     
-        Axios.post('https://retrogamingcrud-app-backend.up.railway.app/create',
+        Axios.post('retrogamingcrud-app-backend-production.up.railway.app/create',
             {
                 game: game,
                 genre: genre,
